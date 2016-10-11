@@ -1,0 +1,26 @@
+{
+    "name": "zualex/parsertext",
+    "description": "This is a PHP class to parse the text using the template",
+    "type": "library",
+    "keywords": ["parser", "text", "template", "php"],
+    "homepage": "https://github.com/zualex/parsertext",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Alexandr Zubarev",
+            "email": "i@zualex.com"
+        }
+    ],
+    "require" : {
+        "php": ">=5.4.0"
+    },
+    "require-dev" : {
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "ParserSms\\": "src/"
+        }
+    }
+}
