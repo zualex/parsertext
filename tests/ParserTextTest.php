@@ -4,6 +4,15 @@ use \ParserText\ParserText;
 
 class ParserTextTest extends \PHPUnit_Framework_TestCase
 {
+    public function testSimple()
+    {
+        $parser = new ParserText('Your name: {% username %}');
+
+        $this->assertEquals($parser->run('Your name: Alexandr Zubarev'), [
+            'username' => 'Alexandr Zubarev',
+        ]);
+    }
+
     public function testSuccess()
     {
         $parserSms = new ParserText('
@@ -21,7 +30,7 @@ class ParserTextTest extends \PHPUnit_Framework_TestCase
         '), [
             'password' => '72946',
             'receiver' => '410011068150008',
-            'password' => '5025,13',
+            'sum' => '5025,13',
         ]);
     }
 }
